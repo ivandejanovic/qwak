@@ -1,9 +1,9 @@
 /**
  * The MIT License (MIT)
- * 
- * Copyright 2008-2013 Quine Interactive and other contributors
+ *
+ * Copyright 2008-2014 Ivan Dejanovic and Quine Interactive
  * www.quineinteractive.com
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -11,10 +11,10 @@
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -34,155 +34,151 @@ import java.util.List;
  * @author Ivan Dejanovic
  * 
  * @version 1.0
+ * 
+ * @since 1.0
  */
 
 public class QwakJqPlotPieChartTag extends QwakBasicTag {
-	private String name;
-	private String pieChartLabels;
-	private String pieChartValues;
-	private String onClickCallback;
-	private List<String> pieChartLabelsList;
-	private List<String> pieChartValuesList;
+    private static final long serialVersionUID = -5655868847744498848L;
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
+    private String       name;
+    private String       pieChartLabels;
+    private String       pieChartValues;
+    private String       onClickCallback;
+    private List<String> pieChartLabelsList;
+    private List<String> pieChartValuesList;
 
-	/**
-	 * @param name
-	 *            the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * @return the pieChartLabels
-	 */
-	public String getPieChartLabels() {
-		return pieChartLabels;
-	}
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	/**
-	 * @param pieChartLabels
-	 *            the pieChartLabels to set
-	 */
-	public void setPieChartLabels(String pieChartLabels) {
-		this.pieChartLabels = pieChartLabels;
-	}
+    /**
+     * @return the pieChartLabels
+     */
+    public String getPieChartLabels() {
+        return pieChartLabels;
+    }
 
-	/**
-	 * @return the pieChartValues
-	 */
-	public String getPieChartValues() {
-		return pieChartValues;
-	}
+    /**
+     * @param pieChartLabels the pieChartLabels to set
+     */
+    public void setPieChartLabels(String pieChartLabels) {
+        this.pieChartLabels = pieChartLabels;
+    }
 
-	/**
-	 * @param pieChartValues
-	 *            the pieChartValues to set
-	 */
-	public void setPieChartValues(String pieChartValues) {
-		this.pieChartValues = pieChartValues;
-	}
+    /**
+     * @return the pieChartValues
+     */
+    public String getPieChartValues() {
+        return pieChartValues;
+    }
 
-	/**
-	 * @return the onClickCallback
-	 */
-	public String getOnClickCallback() {
-		return onClickCallback;
-	}
+    /**
+     * @param pieChartValues the pieChartValues to set
+     */
+    public void setPieChartValues(String pieChartValues) {
+        this.pieChartValues = pieChartValues;
+    }
 
-	/**
-	 * @param onClickCallback
-	 *            the onClickCallback to set
-	 */
-	public void setOnClickCallback(String onClickCallback) {
-		this.onClickCallback = onClickCallback;
-	}
+    /**
+     * @return the onClickCallback
+     */
+    public String getOnClickCallback() {
+        return onClickCallback;
+    }
 
-	/**
-	 * @return the pieChartLabelsList
-	 */
-	public List<String> getPieChartLabelsList() {
-		return pieChartLabelsList;
-	}
+    /**
+     * @param onClickCallback the onClickCallback to set
+     */
+    public void setOnClickCallback(String onClickCallback) {
+        this.onClickCallback = onClickCallback;
+    }
 
-	/**
-	 * @param pieChartLabelsList
-	 *            the pieChartLabelsList to set
-	 */
-	public void setPieChartLabelsList(List<String> pieChartLabelsList) {
-		this.pieChartLabelsList = pieChartLabelsList;
-	}
+    /**
+     * @return the pieChartLabelsList
+     */
+    public List<String> getPieChartLabelsList() {
+        return pieChartLabelsList;
+    }
 
-	/**
-	 * @return the pieChartValuesList
-	 */
-	public List<String> getPieChartValuesList() {
-		return pieChartValuesList;
-	}
+    /**
+     * @param pieChartLabelsList the pieChartLabelsList to set
+     */
+    public void setPieChartLabelsList(List<String> pieChartLabelsList) {
+        this.pieChartLabelsList = pieChartLabelsList;
+    }
 
-	/**
-	 * @param pieChartValuesList
-	 *            the pieChartValuesList to set
-	 */
-	public void setPieChartValuesList(List<String> pieChartValuesList) {
-		this.pieChartValuesList = pieChartValuesList;
-	}
+    /**
+     * @return the pieChartValuesList
+     */
+    public List<String> getPieChartValuesList() {
+        return pieChartValuesList;
+    }
 
-	protected void appendTagCode(StringBuilder sb) {
-		setPropertiesToLists();
+    /**
+     * @param pieChartValuesList the pieChartValuesList to set
+     */
+    public void setPieChartValuesList(List<String> pieChartValuesList) {
+        this.pieChartValuesList = pieChartValuesList;
+    }
 
-		appendJavaScriptHTMLCode(sb);
-	}
+    protected void appendTagCode(StringBuilder sb) {
+        setPropertiesToLists();
 
-	protected void setPropertiesToLists() {
-		pieChartLabelsList = propertyToList(pieChartLabels);
-		pieChartValuesList = propertyToList(pieChartValues);
-	}
+        appendJavaScriptHTMLCode(sb);
+    }
 
-	protected void appendJavaScriptHTMLCode(StringBuilder sb) {
-		sb.append("<script>\n");
-		sb.append("$(function() {\n");
-		sb.append("var data = [\n");
+    protected void setPropertiesToLists() {
+        pieChartLabelsList = propertyToList(pieChartLabels);
+        pieChartValuesList = propertyToList(pieChartValues);
+    }
 
-		for (int index = 0; index < pieChartLabelsList.size(); ++index) {
-			if (index == 0) {
-				sb.append("['" + pieChartLabelsList.get(index) + "', "
-						+ pieChartValuesList.get(index) + "]\n");
-			} else {
-				sb.append(",['" + pieChartLabelsList.get(index) + "', "
-						+ pieChartValuesList.get(index) + "]\n");
-			}
-		}
+    protected void appendJavaScriptHTMLCode(StringBuilder sb) {
+        sb.append("<script>\n");
+        sb.append("$(function() {\n");
+        sb.append("var data = [\n");
 
-		sb.append("];\n");
-		sb.append("jQuery.jqplot ('" + name + "Id', [data],\n");
-		sb.append("{\n");
-		sb.append("seriesDefaults: {\n");
-		sb.append("renderer: jQuery.jqplot.PieRenderer,\n");
-		sb.append("rendererOptions: {\n");
-		sb.append("startAngle: -180,\n");
-		sb.append("showDataLabels: true,\n");
-		sb.append("dataLabels: 'value'\n");
-		sb.append("}\n");
-		sb.append("},\n");
-		sb.append("legend: { show:true, location: 'e' }\n");
-		sb.append("}\n");
-		sb.append(");\n");
-		if (onClickCallback != null) {
-			sb.append("$('#" + name + "Id').bind('jqplotDataClick',\n");
-			sb.append("function (ev, seriesIndex, pointIndex, data) {\n");
-			sb.append(onClickCallback + "(data);\n");
-			sb.append("}\n");
-			sb.append(");\n");
-		}
-		sb.append("});\n");
-		sb.append("</script>\n");
-		sb.append("<div id=\"" + name + "Id\" ></div>\n");
-	}
+        for (int index = 0; index < pieChartLabelsList.size(); ++index) {
+            if (index == 0) {
+                sb.append("['" + pieChartLabelsList.get(index) + "', " + pieChartValuesList.get(index) + "]\n");
+            } else {
+                sb.append(",['" + pieChartLabelsList.get(index) + "', " + pieChartValuesList.get(index) + "]\n");
+            }
+        }
+
+        sb.append("];\n");
+        sb.append("jQuery.jqplot ('" + name + "Id', [data],\n");
+        sb.append("{\n");
+        sb.append("seriesDefaults: {\n");
+        sb.append("renderer: jQuery.jqplot.PieRenderer,\n");
+        sb.append("rendererOptions: {\n");
+        sb.append("startAngle: -180,\n");
+        sb.append("showDataLabels: true,\n");
+        sb.append("dataLabels: 'value'\n");
+        sb.append("}\n");
+        sb.append("},\n");
+        sb.append("legend: { show:true, location: 'e' }\n");
+        sb.append("}\n");
+        sb.append(");\n");
+        if (onClickCallback != null) {
+            sb.append("$('#" + name + "Id').bind('jqplotDataClick',\n");
+            sb.append("function (ev, seriesIndex, pointIndex, data) {\n");
+            sb.append(onClickCallback + "(data);\n");
+            sb.append("}\n");
+            sb.append(");\n");
+        }
+        sb.append("});\n");
+        sb.append("</script>\n");
+        sb.append("<div id=\"" + name + "Id\" ></div>\n");
+    }
 }

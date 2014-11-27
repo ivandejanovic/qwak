@@ -1,9 +1,9 @@
 /**
  * The MIT License (MIT)
- * 
- * Copyright 2008-2013 Quine Interactive and other contributors
+ *
+ * Copyright 2008-2014 Ivan Dejanovic and Quine Interactive
  * www.quineinteractive.com
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -11,10 +11,10 @@
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -40,38 +40,42 @@ import javax.servlet.jsp.tagext.TagSupport;
  * @author Ivan Dejanovic
  * 
  * @version 1.0
+ * 
+ * @since 1.0
  */
 public abstract class QwakBasicTag extends TagSupport {
-	@Override
-	public int doStartTag() throws JspException {
-		try {
-			// Get the writer object for output.
-			JspWriter out = pageContext.getOut();
+    private static final long serialVersionUID = -2052091567459364528L;
 
-			// Generate tag
-			StringBuilder sb = new StringBuilder();
+    @Override
+    public int doStartTag() throws JspException {
+        try {
+            // Get the writer object for output.
+            JspWriter out = pageContext.getOut();
 
-			appendTagCode(sb);
+            // Generate tag
+            StringBuilder sb = new StringBuilder();
 
-			out.println(sb);
+            appendTagCode(sb);
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return SKIP_BODY;
-	}
+            out.println(sb);
 
-	protected abstract void appendTagCode(StringBuilder sb);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return SKIP_BODY;
+    }
 
-	protected List<String> propertyToList(String property) {
-		List<String> list = new ArrayList<String>();
+    protected abstract void appendTagCode(StringBuilder sb);
 
-		String[] propertySplit = property.split(",");
+    protected List<String> propertyToList(String property) {
+        List<String> list = new ArrayList<String>();
 
-		for (String temp : propertySplit) {
-			list.add(temp.trim());
-		}
+        String[] propertySplit = property.split(",");
 
-		return list;
-	}
+        for (String temp : propertySplit) {
+            list.add(temp.trim());
+        }
+
+        return list;
+    }
 }

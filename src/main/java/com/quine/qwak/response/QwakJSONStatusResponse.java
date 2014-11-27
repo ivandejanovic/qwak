@@ -1,9 +1,9 @@
 /**
  * The MIT License (MIT)
- * 
- * Copyright 2008-2013 Quine Interactive and other contributors
+ *
+ * Copyright 2008-2014 Ivan Dejanovic and Quine Interactive
  * www.quineinteractive.com
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -11,10 +11,10 @@
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -29,39 +29,41 @@ package com.quine.qwak.response;
 import java.util.List;
 
 /**
- * Interface that declared all the functionality object needs to implement in
- * order to be send as a JSONstatus status response.
+ * Interface that declared all the functionality object needs to implement in order to be send as a JSONstatus status
+ * response.
  * 
  * @author Ivan Dejanovic
  * 
  * @version 1.0
+ * 
+ * @since 1.0
  */
 public interface QwakJSONStatusResponse {
-	/**
-	 * Get the success status.
-	 * 
-	 * @return success
-	 */
-	public Boolean getSuccess();
+    /**
+     * Get the success status.
+     * 
+     * @return success
+     */
+    public Boolean getSuccess();
 
-	/**
-	 * Set the success status.
-	 * 
-	 * @param success
-	 */
-	public void setSuccess(Boolean success);
+    /**
+     * Set the success status.
+     * 
+     * @param success
+     */
+    public void setSuccess(Boolean success);
 
-	/**
-	 * Get messages.
-	 * 
-	 * @return messages
-	 */
-	public List<String> getMessage();
+    /**
+     * Get messages.
+     * 
+     * @return messages
+     */
+    public List<String> getMessage();
 
-	/**
-	 * Add message to messages list.
-	 * 
-	 * @param message
-	 */
-	public void setMessage(String message);
+    /**
+     * Add message to messages list.
+     * 
+     * @param message
+     */
+    public void setMessage(String message);
 }
