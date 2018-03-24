@@ -318,7 +318,6 @@ abstract public class AbstractQwakJqGridController<T extends QwakJqGridUniqueId,
      * 
      * @param user
      * @param t
-     * @param request
      * 
      * @return qwakJqGridStatusResponse
      */
