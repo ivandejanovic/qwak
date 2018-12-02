@@ -11,7 +11,7 @@
   <properties>
     <jdk.version>1.7</jdk.version>
     <jee.version>7.0</jee.version>
-    <spring.version>4.1.1.RELEASE</spring.version>
+    <spring.version>4.3.21.RELEASE</spring.version>
     <spring.security.version>3.2.5.RELEASE</spring.security.version>
     <jstl.version>1.2</jstl.version>
     <junit.version>4.11</junit.version>
