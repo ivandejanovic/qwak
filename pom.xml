@@ -11,7 +11,7 @@
   <properties>
     <jdk.version>17</jdk.version>
     <jee.version>8.0.1</jee.version>
-    <spring.version>5.3.18</spring.version>
+    <spring.version>5.3.19</spring.version>
     <jstl.version>1.2</jstl.version>
     <junit.version>4.13.2</junit.version>
   </properties>
