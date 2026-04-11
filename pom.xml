@@ -11,7 +11,9 @@
   <properties>
     <jdk.version>17</jdk.version>
     <jee.version>8.0.1</jee.version>
-    <spring.version>6.1.8</spring.version>
+    <spring.version>6.1.14</spring.version>
+    <spring-web.version>6.1.12</spring-web.version>
+    <spring-context.version>6.1.14</spring-context.version>
     <jstl.version>1.2</jstl.version>
     <junit.version>4.13.2</junit.version>
     <encoding>UTF-8</encoding>
@@ -52,13 +54,13 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>${spring.version}</version>
+      <version>${spring-web.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>${spring.version}</version>
+      <version>${spring-context.version}</version>
     </dependency>
 
   </dependencies>
